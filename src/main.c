@@ -6,7 +6,7 @@ void SysTick_Handler(void) {
   switch (tick++) {
   	case 100:
   		tick = 0;
-  		GPIOC->ODR ^= (1 << 8);
+  		GPIOA->ODR ^= (1 << 5);
   		break;
   }
 }
@@ -14,10 +14,10 @@ void SysTick_Handler(void) {
 int main(void)
 {
 
-	RCC->AHBENR |= RCC_AHBENR_GPIOCEN; 	// enable the clock to GPIOC
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN; 	// enable the clock to GPIOA
 						//(RM0091 lists this as IOPCEN, not GPIOCEN)
 
-	GPIOC->MODER = (1 << 16);
+	GPIOA->MODER = (1 << 10); // Setting "01" to bits 18 and 19 for Push Pull
 
 	SysTick_Config(SystemCoreClock/100);
 

@@ -1,7 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
-                              /tmp/ccdpffeu.o (__aeabi_uidiv)
+                              /tmp/cc2UiRy5.o (__aeabi_uidiv)
 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
                               /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-atexit.o)
@@ -50,19 +50,19 @@ Discarded input sections
                 0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/crt0.o
  .ARM.attributes
                 0x0000000000000000       0x1b /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/crt0.o
- .text          0x0000000000000000        0x0 /tmp/ccdpffeu.o
- .data          0x0000000000000000        0x0 /tmp/ccdpffeu.o
- .bss           0x0000000000000000        0x0 /tmp/ccdpffeu.o
- .text          0x0000000000000000        0x0 /tmp/cc7PJ57d.o
- .data          0x0000000000000000        0x0 /tmp/cc7PJ57d.o
- .bss           0x0000000000000000        0x0 /tmp/cc7PJ57d.o
+ .text          0x0000000000000000        0x0 /tmp/cc2UiRy5.o
+ .data          0x0000000000000000        0x0 /tmp/cc2UiRy5.o
+ .bss           0x0000000000000000        0x0 /tmp/cc2UiRy5.o
+ .text          0x0000000000000000        0x0 /tmp/ccXMp5Q2.o
+ .data          0x0000000000000000        0x0 /tmp/ccXMp5Q2.o
+ .bss           0x0000000000000000        0x0 /tmp/ccXMp5Q2.o
  .text.SystemCoreClockUpdate
-                0x0000000000000000       0x64 /tmp/cc7PJ57d.o
+                0x0000000000000000       0x64 /tmp/ccXMp5Q2.o
  .data.AHBPrescTable
-                0x0000000000000000       0x10 /tmp/cc7PJ57d.o
- .text          0x0000000000000000       0x14 /tmp/cclkW42X.o
- .data          0x0000000000000000        0x0 /tmp/cclkW42X.o
- .bss           0x0000000000000000        0x0 /tmp/cclkW42X.o
+                0x0000000000000000       0x10 /tmp/ccXMp5Q2.o
+ .text          0x0000000000000000       0x14 /tmp/ccGnfdb0.o
+ .data          0x0000000000000000        0x0 /tmp/ccGnfdb0.o
+ .bss           0x0000000000000000        0x0 /tmp/ccGnfdb0.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
@@ -219,9 +219,9 @@ Linker script and memory map
 LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
 LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/crt0.o
-LOAD /tmp/ccdpffeu.o
-LOAD /tmp/cc7PJ57d.o
-LOAD /tmp/cclkW42X.o
+LOAD /tmp/cc2UiRy5.o
+LOAD /tmp/ccXMp5Q2.o
+LOAD /tmp/ccGnfdb0.o
 LOAD Libraries/libstm32f0.a
 START GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a
@@ -235,11 +235,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 .isr_vector     0x0000000008000000       0xc4
                 0x0000000008000000                . = ALIGN (0x4)
  *(.isr_vector)
- .isr_vector    0x0000000008000000       0xc4 /tmp/cclkW42X.o
+ .isr_vector    0x0000000008000000       0xc4 /tmp/ccGnfdb0.o
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c4                . = ALIGN (0x4)
 
-.text           0x00000000080000c4      0x314
+.text           0x00000000080000c4      0x30c
                 0x00000000080000c4                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c4      0x120 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
@@ -251,111 +251,111 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
                 0x00000000080001e4                __aeabi_idiv0
  *(.text.*)
  .text.SysTick_Handler
-                0x00000000080001e8       0x28 /tmp/ccdpffeu.o
+                0x00000000080001e8       0x24 /tmp/cc2UiRy5.o
                 0x00000000080001e8                SysTick_Handler
  .text.startup.main
-                0x0000000008000210       0x60 /tmp/ccdpffeu.o
-                0x0000000008000210                main
+                0x000000000800020c       0x5c /tmp/cc2UiRy5.o
+                0x000000000800020c                main
  .text.SystemInit
-                0x0000000008000270       0xb4 /tmp/cc7PJ57d.o
-                0x0000000008000270                SystemInit
+                0x0000000008000268       0xb4 /tmp/ccXMp5Q2.o
+                0x0000000008000268                SystemInit
  .text.Reset_Handler
-                0x0000000008000324       0x50 /tmp/cclkW42X.o
-                0x0000000008000324                Reset_Handler
+                0x000000000800031c       0x50 /tmp/ccGnfdb0.o
+                0x000000000800031c                Reset_Handler
  .text.Default_Handler
-                0x0000000008000374        0x2 /tmp/cclkW42X.o
-                0x0000000008000374                TIM1_CC_IRQHandler
-                0x0000000008000374                HardFault_Handler
-                0x0000000008000374                ADC1_COMP_IRQHandler
-                0x0000000008000374                PVD_IRQHandler
-                0x0000000008000374                PendSV_Handler
-                0x0000000008000374                NMI_Handler
-                0x0000000008000374                I2C1_IRQHandler
-                0x0000000008000374                SPI1_IRQHandler
-                0x0000000008000374                TIM6_DAC_IRQHandler
-                0x0000000008000374                EXTI2_3_IRQHandler
-                0x0000000008000374                I2C2_IRQHandler
-                0x0000000008000374                TIM17_IRQHandler
-                0x0000000008000374                RTC_IRQHandler
-                0x0000000008000374                TIM16_IRQHandler
-                0x0000000008000374                TIM3_IRQHandler
-                0x0000000008000374                EXTI4_15_IRQHandler
-                0x0000000008000374                RCC_IRQHandler
-                0x0000000008000374                DMA1_Channel1_IRQHandler
-                0x0000000008000374                Default_Handler
-                0x0000000008000374                CEC_IRQHandler
-                0x0000000008000374                TIM14_IRQHandler
-                0x0000000008000374                DMA1_Channel4_5_IRQHandler
-                0x0000000008000374                TIM15_IRQHandler
-                0x0000000008000374                EXTI0_1_IRQHandler
-                0x0000000008000374                SPI2_IRQHandler
-                0x0000000008000374                SVC_Handler
-                0x0000000008000374                TS_IRQHandler
-                0x0000000008000374                WWDG_IRQHandler
-                0x0000000008000374                TIM2_IRQHandler
-                0x0000000008000374                DMA1_Channel2_3_IRQHandler
-                0x0000000008000374                USART2_IRQHandler
-                0x0000000008000374                FLASH_IRQHandler
-                0x0000000008000374                USART1_IRQHandler
-                0x0000000008000374                TIM1_BRK_UP_TRG_COM_IRQHandler
- *fill*         0x0000000008000376        0x2 
+                0x000000000800036c        0x2 /tmp/ccGnfdb0.o
+                0x000000000800036c                TIM1_CC_IRQHandler
+                0x000000000800036c                HardFault_Handler
+                0x000000000800036c                ADC1_COMP_IRQHandler
+                0x000000000800036c                PVD_IRQHandler
+                0x000000000800036c                PendSV_Handler
+                0x000000000800036c                NMI_Handler
+                0x000000000800036c                I2C1_IRQHandler
+                0x000000000800036c                SPI1_IRQHandler
+                0x000000000800036c                TIM6_DAC_IRQHandler
+                0x000000000800036c                EXTI2_3_IRQHandler
+                0x000000000800036c                I2C2_IRQHandler
+                0x000000000800036c                TIM17_IRQHandler
+                0x000000000800036c                RTC_IRQHandler
+                0x000000000800036c                TIM16_IRQHandler
+                0x000000000800036c                TIM3_IRQHandler
+                0x000000000800036c                EXTI4_15_IRQHandler
+                0x000000000800036c                RCC_IRQHandler
+                0x000000000800036c                DMA1_Channel1_IRQHandler
+                0x000000000800036c                Default_Handler
+                0x000000000800036c                CEC_IRQHandler
+                0x000000000800036c                TIM14_IRQHandler
+                0x000000000800036c                DMA1_Channel4_5_IRQHandler
+                0x000000000800036c                TIM15_IRQHandler
+                0x000000000800036c                EXTI0_1_IRQHandler
+                0x000000000800036c                SPI2_IRQHandler
+                0x000000000800036c                SVC_Handler
+                0x000000000800036c                TS_IRQHandler
+                0x000000000800036c                WWDG_IRQHandler
+                0x000000000800036c                TIM2_IRQHandler
+                0x000000000800036c                DMA1_Channel2_3_IRQHandler
+                0x000000000800036c                USART2_IRQHandler
+                0x000000000800036c                FLASH_IRQHandler
+                0x000000000800036c                USART1_IRQHandler
+                0x000000000800036c                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x000000000800036e        0x2 
  .text.__libc_init_array
-                0x0000000008000378       0x48 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
-                0x0000000008000378                __libc_init_array
+                0x0000000008000370       0x48 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
+                0x0000000008000370                __libc_init_array
  *(.rodata)
  *(.rodata*)
  *(.glue_7)
- .glue_7        0x00000000080003c0        0x0 linker stubs
+ .glue_7        0x00000000080003b8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x00000000080003c0        0x0 linker stubs
+ .glue_7t       0x00000000080003b8        0x0 linker stubs
  *(.init)
- .init          0x00000000080003c0        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00000000080003c0                _init
- .init          0x00000000080003c4        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+ .init          0x00000000080003b8        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00000000080003b8                _init
+ .init          0x00000000080003bc        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
  *(.fini)
- .fini          0x00000000080003cc        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
-                0x00000000080003cc                _fini
- .fini          0x00000000080003d0        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
-                0x00000000080003d8                . = ALIGN (0x4)
-                0x00000000080003d8                _etext = .
-                0x00000000080003d8                _sidata = _etext
+ .fini          0x00000000080003c4        0x4 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
+                0x00000000080003c4                _fini
+ .fini          0x00000000080003c8        0x8 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
+                0x00000000080003d0                . = ALIGN (0x4)
+                0x00000000080003d0                _etext = .
+                0x00000000080003d0                _sidata = _etext
 
-.vfp11_veneer   0x00000000080003d8        0x0
- .vfp11_veneer  0x00000000080003d8        0x0 linker stubs
+.vfp11_veneer   0x00000000080003d0        0x0
+ .vfp11_veneer  0x00000000080003d0        0x0 linker stubs
 
-.v4_bx          0x00000000080003d8        0x0
- .v4_bx         0x00000000080003d8        0x0 linker stubs
+.v4_bx          0x00000000080003d0        0x0
+ .v4_bx         0x00000000080003d0        0x0 linker stubs
 
-.iplt           0x00000000080003d8        0x0
- .iplt          0x00000000080003d8        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+.iplt           0x00000000080003d0        0x0
+ .iplt          0x00000000080003d0        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.rel.dyn        0x00000000080003d8        0x0
- .rel.iplt      0x00000000080003d8        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
+.rel.dyn        0x00000000080003d0        0x0
+ .rel.iplt      0x00000000080003d0        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.data           0x0000000020000000        0x4 load address 0x00000000080003d8
+.data           0x0000000020000000        0x4 load address 0x00000000080003d0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
                 0x0000000020000000                _data = .
  *(.data)
  *(.data.*)
  .data.SystemCoreClock
-                0x0000000020000000        0x4 /tmp/cc7PJ57d.o
+                0x0000000020000000        0x4 /tmp/ccXMp5Q2.o
                 0x0000000020000000                SystemCoreClock
  *(.RAMtext)
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _edata = .
 
-.igot.plt       0x0000000020000004        0x0 load address 0x00000000080003dc
+.igot.plt       0x0000000020000004        0x0 load address 0x00000000080003d4
  .igot.plt      0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtbegin.o
 
-.bss            0x0000000020000004        0x4 load address 0x00000000080003dc
+.bss            0x0000000020000004        0x4 load address 0x00000000080003d4
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _sbss = .
                 0x0000000020000004                _bss = .
  *(.bss)
  *(.bss.*)
  .bss.tick.5884
-                0x0000000020000004        0x2 /tmp/ccdpffeu.o
+                0x0000000020000004        0x2 /tmp/cc2UiRy5.o
  *(COMMON)
                 0x0000000020000008                . = ALIGN (0x4)
  *fill*         0x0000000020000006        0x2 
@@ -390,9 +390,9 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 
 .comment        0x0000000000000000       0x70
  *(.comment)
- .comment       0x0000000000000000       0x38 /tmp/ccdpffeu.o
+ .comment       0x0000000000000000       0x38 /tmp/cc2UiRy5.o
                                          0x39 (size before relaxing)
- .comment       0x0000000000000038       0x39 /tmp/cc7PJ57d.o
+ .comment       0x0000000000000038       0x39 /tmp/ccXMp5Q2.o
  .comment       0x0000000000000038       0x38 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
                                          0x39 (size before relaxing)
 
@@ -401,11 +401,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
  .ARM.attributes
                 0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crti.o
  .ARM.attributes
-                0x000000000000001e       0x31 /tmp/ccdpffeu.o
+                0x000000000000001e       0x31 /tmp/cc2UiRy5.o
  .ARM.attributes
-                0x000000000000004f       0x31 /tmp/cc7PJ57d.o
+                0x000000000000004f       0x31 /tmp/ccXMp5Q2.o
  .ARM.attributes
-                0x0000000000000080       0x21 /tmp/cclkW42X.o
+                0x0000000000000080       0x21 /tmp/ccGnfdb0.o
  .ARM.attributes
                 0x00000000000000a1       0x1e /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .ARM.attributes
@@ -430,11 +430,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 .debug_aranges  0x0000000000000000       0xd8
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x28 /tmp/ccdpffeu.o
+                0x0000000000000000       0x28 /tmp/cc2UiRy5.o
  .debug_aranges
-                0x0000000000000028       0x28 /tmp/cc7PJ57d.o
+                0x0000000000000028       0x28 /tmp/ccXMp5Q2.o
  .debug_aranges
-                0x0000000000000050       0x28 /tmp/cclkW42X.o
+                0x0000000000000050       0x28 /tmp/ccGnfdb0.o
  .debug_aranges
                 0x0000000000000078       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .debug_aranges
@@ -445,53 +445,53 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xbb5
+.debug_info     0x0000000000000000      0xbaa
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000      0x5db /tmp/ccdpffeu.o
- .debug_info    0x00000000000005db      0x2eb /tmp/cc7PJ57d.o
- .debug_info    0x00000000000008c6       0x78 /tmp/cclkW42X.o
- .debug_info    0x000000000000093e       0xb9 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
- .debug_info    0x00000000000009f7       0xb9 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
- .debug_info    0x0000000000000ab0      0x105 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
+ .debug_info    0x0000000000000000      0x5db /tmp/cc2UiRy5.o
+ .debug_info    0x00000000000005db      0x2eb /tmp/ccXMp5Q2.o
+ .debug_info    0x00000000000008c6       0x6d /tmp/ccGnfdb0.o
+ .debug_info    0x0000000000000933       0xb9 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
+ .debug_info    0x00000000000009ec       0xb9 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0000000000000aa5      0x105 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
 
 .debug_abbrev   0x0000000000000000      0x3a5
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0x180 /tmp/ccdpffeu.o
- .debug_abbrev  0x0000000000000180      0x131 /tmp/cc7PJ57d.o
- .debug_abbrev  0x00000000000002b1       0x12 /tmp/cclkW42X.o
+ .debug_abbrev  0x0000000000000000      0x180 /tmp/cc2UiRy5.o
+ .debug_abbrev  0x0000000000000180      0x131 /tmp/ccXMp5Q2.o
+ .debug_abbrev  0x00000000000002b1       0x12 /tmp/ccGnfdb0.o
  .debug_abbrev  0x00000000000002c3       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .debug_abbrev  0x00000000000002d7       0x14 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
  .debug_abbrev  0x00000000000002eb       0xba /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
 
-.debug_line     0x0000000000000000      0x462
+.debug_line     0x0000000000000000      0x460
  *(.debug_line)
- .debug_line    0x0000000000000000      0x138 /tmp/ccdpffeu.o
- .debug_line    0x0000000000000138      0x123 /tmp/cc7PJ57d.o
- .debug_line    0x000000000000025b       0x7d /tmp/cclkW42X.o
- .debug_line    0x00000000000002d8       0x6c /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
- .debug_line    0x0000000000000344       0x5e /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
- .debug_line    0x00000000000003a2       0xc0 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
+ .debug_line    0x0000000000000000      0x136 /tmp/cc2UiRy5.o
+ .debug_line    0x0000000000000136      0x123 /tmp/ccXMp5Q2.o
+ .debug_line    0x0000000000000259       0x7d /tmp/ccGnfdb0.o
+ .debug_line    0x00000000000002d6       0x6c /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000000342       0x5e /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00000000000003a0       0xc0 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
 
 .debug_frame    0x0000000000000000       0xcc
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x38 /tmp/ccdpffeu.o
- .debug_frame   0x0000000000000038       0x48 /tmp/cc7PJ57d.o
+ .debug_frame   0x0000000000000000       0x38 /tmp/cc2UiRy5.o
+ .debug_frame   0x0000000000000038       0x48 /tmp/ccXMp5Q2.o
  .debug_frame   0x0000000000000080       0x20 /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .debug_frame   0x00000000000000a0       0x2c /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
 
-.debug_str      0x0000000000000000      0x6b1
+.debug_str      0x0000000000000000      0x6a6
  *(.debug_str)
- .debug_str     0x0000000000000000      0x46e /tmp/ccdpffeu.o
-                                        0x4b9 (size before relaxing)
- .debug_str     0x000000000000046e       0xb9 /tmp/cc7PJ57d.o
-                                        0x292 (size before relaxing)
- .debug_str     0x0000000000000527      0x18a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
+ .debug_str     0x0000000000000000      0x463 /tmp/cc2UiRy5.o
+                                        0x4ae (size before relaxing)
+ .debug_str     0x0000000000000463       0xb9 /tmp/ccXMp5Q2.o
+                                        0x287 (size before relaxing)
+ .debug_str     0x000000000000051c      0x18a /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
                                         0x21c (size before relaxing)
 
 .debug_loc      0x0000000000000000      0x1c4
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x59 /tmp/ccdpffeu.o
- .debug_loc     0x0000000000000059       0xe7 /tmp/cc7PJ57d.o
+ .debug_loc     0x0000000000000000       0x59 /tmp/cc2UiRy5.o
+ .debug_loc     0x0000000000000059       0xe7 /tmp/ccXMp5Q2.o
  .debug_loc     0x0000000000000140       0x84 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)
 
 .debug_macinfo
@@ -511,7 +511,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv6-m/crtn.o
 OUTPUT(main.elf elf32-littlearm)
 
 .debug_ranges   0x0000000000000000       0x60
- .debug_ranges  0x0000000000000000       0x18 /tmp/ccdpffeu.o
- .debug_ranges  0x0000000000000018       0x18 /tmp/cc7PJ57d.o
- .debug_ranges  0x0000000000000030       0x20 /tmp/cclkW42X.o
+ .debug_ranges  0x0000000000000000       0x18 /tmp/cc2UiRy5.o
+ .debug_ranges  0x0000000000000018       0x18 /tmp/ccXMp5Q2.o
+ .debug_ranges  0x0000000000000030       0x20 /tmp/ccGnfdb0.o
  .debug_ranges  0x0000000000000050       0x10 /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv6-m/libg.a(lib_a-init.o)

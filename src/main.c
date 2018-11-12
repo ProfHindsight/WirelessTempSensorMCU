@@ -1,4 +1,5 @@
 #include "stm32f0xx_conf.h"
+#include "gpio_driver.h"
 
 void SysTick_Handler(void) {
   static uint16_t tick = 0;
@@ -13,6 +14,7 @@ void SysTick_Handler(void) {
 
 int main(void)
 {
+  initialize_gpio();
 
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN; 	// enable the clock to GPIOA
 						//(RM0091 lists this as IOPCEN, not GPIOCEN)

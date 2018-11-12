@@ -36,77 +36,59 @@ typedef enum gpio_pins
 
 typedef struct gpio_struct
 {
-	uint32_t gpio_port;
+	GPIO_TypeDef * gpio_port;
 	uint16_t gpio_pin;
-}
+}gpio_struct_t;
 
-const gpio_struct gpio_pin_mapping[] = {
-	{GPIOB, GPIO_Pin_8} // gpio_i2c_scl		- D15
-	{GPIOB, GPIO_Pin_9} // gpio_i2c_sda		- D14
-	{GPIOA, GPIO_Pin_9} // gpio_i2c_power 	- D8
-	{GPIOA, GPIO_Pin_6} // gpio_nrf24_miso	- D12
-	{GPIOA, GPIO_Pin_7} // gpio_nrf24_mosi	- D11
-	{GPIOA, GPIO_Pin_5} // gpio_nrf24_clk	- D13
-	{GPIOB, GPIO_Pin_6} // gpio_nrf24_cs	- D10
-	{GPIOC, GPIO_Pin_7} // gpio_nrf24_ce 	- D9
-	{GPIOA, GPIO_Pin_8} // gpio_nrf24_power - D7
-	{GPIOB, GPIO_Pin_10}// gpio_nrf24_pa_en - D6
-	{GPIOA, GPIO_Pin_0} // gpio_bat_detect 	- A0
-	{GPIOA, GPIO_Pin_3} // gpio_debug_rx	- D0
+const gpio_struct_t gpio_pin_mapping[] = {
+	{GPIOB, GPIO_Pin_8}, // gpio_i2c_scl		- D15
+	{GPIOB, GPIO_Pin_9}, // gpio_i2c_sda		- D14
+	{GPIOA, GPIO_Pin_9}, // gpio_i2c_power 	- D8
+	{GPIOA, GPIO_Pin_6}, // gpio_nrf24_miso	- D12
+	{GPIOA, GPIO_Pin_7}, // gpio_nrf24_mosi	- D11
+	{GPIOA, GPIO_Pin_5}, // gpio_nrf24_clk	- D13
+	{GPIOB, GPIO_Pin_6}, // gpio_nrf24_cs	- D10
+	{GPIOC, GPIO_Pin_7}, // gpio_nrf24_ce 	- D9
+	{GPIOA, GPIO_Pin_8}, // gpio_nrf24_power - D7
+	{GPIOB, GPIO_Pin_10},// gpio_nrf24_pa_en - D6
+	{GPIOA, GPIO_Pin_0}, // gpio_bat_detect 	- A0
+	{GPIOA, GPIO_Pin_3}, // gpio_debug_rx	- D0
 	{GPIOA, GPIO_Pin_2} // gpio_debug_tx	- D1
-	{} // gpio_clk_lfxo1 					TODO: Define These
-	{} // gpio_clk_lfxo2
-	{} // gpio_swclk
-	{} // gpio_swdio
-	{} // gpio_nrst
-	{} // gpio_swo
-}
+};
 
 const GPIOMode_TypeDef gpio_pin_direction[] = 
 {
-	GPIO_MODE_AF 	// gpio_i2c_scl		- D15
-	GPIO_MODE_AF 	// gpio_i2c_sda		- D14
-	GPIO_MODE_OUT 	// gpio_i2c_power 	- D8
-	GPIO_MODE_AF 	// gpio_nrf24_miso	- D12
-	GPIO_MODE_AF 	// gpio_nrf24_mosi	- D11
-	GPIO_MODE_AF 	// gpio_nrf24_clk	- D13
-	GPIO_MODE_AF 	// gpio_nrf24_cs	- D10
-	GPIO_MODE_AF 	// gpio_nrf24_ce 	- D9
-	GPIO_MODE_OUT	// gpio_nrf24_power - D7
-	GPIO_MODE_OUT	// gpio_nrf24_pa_en - D6
-	GPIO_MODE_AN	// gpio_bat_detect 	- A0
-	GPIO_MODE_AF 	// gpio_debug_rx	- D0
+	GPIO_MODE_AF, 	// gpio_i2c_scl		- D15
+	GPIO_MODE_AF, 	// gpio_i2c_sda		- D14
+	GPIO_MODE_OUT, 	// gpio_i2c_power 	- D8
+	GPIO_MODE_AF, 	// gpio_nrf24_miso	- D12
+	GPIO_MODE_AF, 	// gpio_nrf24_mosi	- D11
+	GPIO_MODE_AF, 	// gpio_nrf24_clk	- D13
+	GPIO_MODE_AF, 	// gpio_nrf24_cs	- D10
+	GPIO_MODE_AF, 	// gpio_nrf24_ce 	- D9
+	GPIO_MODE_OUT,	// gpio_nrf24_power - D7
+	GPIO_MODE_OUT,	// gpio_nrf24_pa_en - D6
+	GPIO_MODE_AN,	// gpio_bat_detect 	- A0
+	GPIO_MODE_AF, 	// gpio_debug_rx	- D0
 	GPIO_MODE_AF 	// gpio_debug_tx	- D1
-	// gpio_clk_lfxo1 	TODO: Define These
-	// gpio_clk_lfxo2
-	// gpio_swclk
-	// gpio_swdio
-	// gpio_nrst
-	// gpio_swo
-}
+};
 
 const uint8_t gpio_af_selection[] = 
 {
-	GPIO_MODE_AF 	// gpio_i2c_scl		- D15
-	GPIO_MODE_AF 	// gpio_i2c_sda		- D14
-	GPIO_AF_0 	// gpio_i2c_power 	- D8
-	GPIO_MODE_AF 	// gpio_nrf24_miso	- D12
-	GPIO_MODE_AF 	// gpio_nrf24_mosi	- D11
-	GPIO_MODE_AF 	// gpio_nrf24_clk	- D13
-	GPIO_MODE_AF 	// gpio_nrf24_cs	- D10
-	GPIO_MODE_AF 	// gpio_nrf24_ce 	- D9
-	GPIO_AF_0	// gpio_nrf24_power - D7
-	GPIO_AF_0	// gpio_nrf24_pa_en - D6
-	GPIO_AF_0	// gpio_bat_detect 	- A0
-	GPIO_MODE_AF 	// gpio_debug_rx	- D0
+	GPIO_MODE_AF, 	// gpio_i2c_scl		- D15
+	GPIO_MODE_AF, 	// gpio_i2c_sda		- D14
+	GPIO_AF_0, 	// gpio_i2c_power 	- D8
+	GPIO_MODE_AF, 	// gpio_nrf24_miso	- D12
+	GPIO_MODE_AF, 	// gpio_nrf24_mosi	- D11
+	GPIO_MODE_AF, 	// gpio_nrf24_clk	- D13
+	GPIO_MODE_AF, 	// gpio_nrf24_cs	- D10
+	GPIO_MODE_AF, 	// gpio_nrf24_ce 	- D9
+	GPIO_AF_0,	// gpio_nrf24_power - D7
+	GPIO_AF_0,	// gpio_nrf24_pa_en - D6
+	GPIO_AF_0,	// gpio_bat_detect 	- A0
+	GPIO_MODE_AF, 	// gpio_debug_rx	- D0
 	GPIO_MODE_AF 	// gpio_debug_tx	- D1
-	// gpio_clk_lfxo1 	TODO: Define These
-	// gpio_clk_lfxo2
-	// gpio_swclk
-	// gpio_swdio
-	// gpio_nrst
-	// gpio_swo
-}
+};
 
 
 void initialize_gpio(void);
